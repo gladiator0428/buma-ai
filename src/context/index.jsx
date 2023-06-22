@@ -33,7 +33,6 @@ export const AppWrapper = ({ children }) => {
 
   const setContext = async () => {
     const token = localStorage.user;
-
     if (token) {
       const decoded = jwt_decode(String(token));
       if (decoded.exp < Date.now() / 1000) {
