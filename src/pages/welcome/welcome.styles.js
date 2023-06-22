@@ -24,9 +24,11 @@ export const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  .auth-button {
-    width: 120px;
+
+  .home-action-button {
+    width: 100px;
   }
+
   & > :not(:first-child) {
     margin-left: 16px;
   }

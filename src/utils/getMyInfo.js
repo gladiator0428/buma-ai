@@ -5,7 +5,7 @@ export const getMyInfo = () => {
     const token = localStorage.user;
     if (token) {
       const decoded = jwtDecode(token);
-      return decoded.user;
+      return decoded;
     } else {
       return { error: "Not authenticated" };
     }

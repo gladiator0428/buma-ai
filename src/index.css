@@ -10,6 +10,7 @@ body {
 * {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  transition: all 0.3s;
 }
 
 code {
@@ -25,4 +26,8 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+.auth-button {
+  width: 120px !important;
 }

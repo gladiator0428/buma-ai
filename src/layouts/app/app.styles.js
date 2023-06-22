@@ -12,6 +12,8 @@ export const AppContainer = styled.div`
   width: 95%;
   margin: auto;
   padding: 50px 0;
+  display: flex;
+  flex: 1;
 `;
 
 export const AppHeaderWrapper = styled.div`

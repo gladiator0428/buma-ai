@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import { AppLayout } from "../../layouts/app";
+import { AppLayout } from "../../layouts";
 import { AuthContainer, AuthFormGroup } from "./auth.styles";
 import { Button, Input } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { signinFormValidation } from "../../utils";
 import { loginAction } from "../../actions";
 import { Toaster, toast } from "react-hot-toast";
-import { useAuthContext } from "../../context";
 
 export const SigninPage = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState({ email: "", password: "" });
-  const { setAuthContext } = useAuthContext();
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));

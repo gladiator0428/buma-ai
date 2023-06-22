@@ -1,5 +1,6 @@
 import React from "react";
+import { EditorLayoutWrapper } from "./editor.styles";
 
 export const EditorLayout = ({ children }) => {
-  return <div>{children}</div>;
+  return <EditorLayoutWrapper>{children}</EditorLayoutWrapper>;
 };

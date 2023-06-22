@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppLayout } from "../../layouts/app";
+import { AppLayout } from "../../layouts";
 import { AuthContainer, AuthFormGroup } from "../signin/auth.styles";
 import { Button, Input } from "../../components";
 import { useNavigate } from "react-router-dom";

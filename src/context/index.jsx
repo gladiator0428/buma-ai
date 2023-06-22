@@ -8,6 +8,7 @@ import React, {
 import { useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import { isPrivateUrl } from "../utils";
+import { getArticleData } from "../actions";
 
 const AuthContext = createContext({});
 const ArticleContext = createContext([]);
@@ -51,6 +52,8 @@ export const AppWrapper = ({ children }) => {
           isAuthenticated: true,
           user: localStorage.getItem("user"),
         });
+        const articleData = await getArticleData(decoded.id);
+        setArticleContext(articleData.data);
         if (!isPrivateUrl(location.pathname, true)) {
           navigate("/home");
         }
