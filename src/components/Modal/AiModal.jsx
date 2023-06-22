@@ -29,8 +29,9 @@ export const AiModal = ({ text }) => {
     }
   };
 
-  const handlePreview = (id) => {
-    setPreview({ id: id, open: true });
+  const handlePreview = (title, content) => {
+    // setPreview({ id: id, open: true });
+    setPreview({ title: title, content: content, open: true });
   };
 
   return (
@@ -49,7 +50,9 @@ export const AiModal = ({ text }) => {
             ? "Loading..."
             : data.map((item, key) => (
                 <SearchItem key={key}>
-                  <h1 onClick={() => handlePreview(item.id)}>{item.title}</h1>
+                  <h1 onClick={() => handlePreview(item.title, item.content)}>
+                    {item.title}
+                  </h1>
                   <p>{item.plainText}</p>
                 </SearchItem>
               ))}
